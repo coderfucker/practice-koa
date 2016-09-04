@@ -1,0 +1,8 @@
+ul.phones
+  each phone in phones
+    li.thumbnail
+      - var url = `/phones${phone.id}`;
+      a.thumb(href= url)
+        img(src= phone.imageUrl alt= phone.name)
+      a(href= url)= phone.name
+      p= phone.snippet
